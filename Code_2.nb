@@ -1,0 +1,113 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3421,        105]
+NotebookOptionsPosition[      2871,         85]
+NotebookOutlinePosition[      3262,        102]
+CellTagsIndexPosition[      3219,         99]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"(", 
+  RowBox[{
+  "Text", " ", "S2", " ", "Theoretical", " ", "model", " ", "for", " ", 
+   "predict", " ", "critical", " ", "angle"}], ")"}]], "Input",
+ CellChangeTimes->{{3.9213115296155715`*^9, 
+  3.921311572403433*^9}},ExpressionUUID->"ed0523e2-df02-43ed-b5b8-\
+793d8364b155"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   SubscriptBox["\[Nu]", "s"], "=", "0.499"}], ";", 
+  RowBox[{"(*", 
+   RowBox[{"The", " ", 
+    RowBox[{"Possion", "'"}], "s", " ", "ratio", " ", "of", " ", 
+    "substructure", " ", "layer"}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"strainratio", "[", "\[Theta]_", "]"}], ":=", 
+   RowBox[{
+    SuperscriptBox[
+     RowBox[{"Cos", "[", "\[Theta]", "]"}], "2"], "-", 
+    RowBox[{
+     SubscriptBox["\[Nu]", "s"], 
+     SuperscriptBox[
+      RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"]}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"sol", "=", 
+   RowBox[{"FindRoot", "[", 
+    RowBox[{
+     RowBox[{"strainratio", "[", "\[Theta]", "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\[Theta]", ",", 
+       FractionBox["\[Pi]", "4"]}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"criangle", "=", 
+   RowBox[{
+    RowBox[{"sol", "[", 
+     RowBox[{"[", 
+      RowBox[{"1", ",", "2"}], "]"}], "]"}], "*", 
+    FractionBox["180", "\[Pi]"]}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.9062768094990797`*^9, 3.906276908721528*^9}, {
+   3.906276939220901*^9, 3.906276957742775*^9}, 3.906278428275217*^9, {
+   3.912566224694476*^9, 3.9125662768688116`*^9}, {3.91402079384247*^9, 
+   3.914020814046991*^9}, 3.9140334286850157`*^9, {3.9141943904359274`*^9, 
+   3.914194391932234*^9}, {3.914194432624363*^9, 3.914194433004513*^9}, {
+   3.914194499659906*^9, 3.9141944999026575`*^9}, 3.914194585489283*^9, {
+   3.9213115895735073`*^9, 
+   3.92131173567177*^9}},ExpressionUUID->"6fd9cf7b-f57a-4dbc-aa46-\
+8f968d2a922e"],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"strainratio", "[", "\[Theta]", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\[Theta]", ",", "0", ",", 
+     FractionBox["\[Pi]", "2"]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.9140234698522654`*^9, 3.914023514313628*^9}, {
+  3.914033425377387*^9, 
+  3.9140334259218807`*^9}},ExpressionUUID->"068c3143-241c-43dd-83dc-\
+52e8f5707551"]
+},
+WindowSize->{1201, 1131},
+WindowMargins->{{Automatic, 374}, {-494, Automatic}},
+Magnification:>2.1 Inherited,
+FrontEndVersion->"11.1 for Microsoft Windows (64-bit) (2017\:5e745\:670816\
+\:65e5)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 304, 7, 96, "Input", "ExpressionUUID" -> \
+"ed0523e2-df02-43ed-b5b8-793d8364b155"],
+Cell[865, 29, 1600, 42, 332, "Input", "ExpressionUUID" -> \
+"6fd9cf7b-f57a-4dbc-aa46-8f968d2a922e"],
+Cell[2468, 73, 399, 10, 125, "Input", "ExpressionUUID" -> \
+"068c3143-241c-43dd-83dc-52e8f5707551"]
+}
+]
+*)
+
